@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+/*
+ * Default font is Geneva
+ * font size: 14px
+ * font color: #666 medium gray
+ * background color: #FAFAFA light gray
+ * Theme color:
+ *   Cream Green: #00b37d (top floating bar, footer)
+ *   Light Copper: #BEB6AC
+ *   Dark Copper: #9B9287
+ *   Grass Green: #7D9712
+ *   Sky Blue: #7FC9E0
+ *   Coffee Brown: #725D4C
+ *   Espresso Dark Brown: #3B2D22
+ *   Navy Dark Blue: #336780
+ */
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: Geneva, Tahoma, sans-serif;
+	font-size:14px;
+	color:#666;
+	margin:0;
+	padding:0;
+	background:#FAFAFA;	
+	position: relative;
+}
+
+.main-header {
+	min-height: 800px;
+	position: relative;
+	text-align: center;
+}
+	@media (max-width: 1600px) {
+		.main-header {
+			min-height: 732px; /* insert the image max height*/
+		}
+	}
+	
+	@media (max-width: 568px) {
+		.main-header {
+			min-height: 400px;
+		}
+	}
+	
+	.main-header .two-col {
+		min-height: 800px;
+	}
+	@media (max-width: 1600px) {
+		.main-header .two-col {
+			min-height: 732px; /* insert the image max height*/
+		}
+	}
+	
+	@media (max-width: 568px) {
+		.main-header .two-col {
+			min-height: 400px;
+		}
+	}
+
+.two-col {
+	width: 50%;
+	float: left;
+	height: 100%;
+	display: block;
+	position: relative;
+}
+
+
+.four-col {
+  width: 25%;
+  float: left;
+  height: 100%; 
+}
+	@media (max-width: 480px) {
+    	.four-col {
+      		width: 100%; 
+    	}
+  	}
+
+.one-col {
+  position: relative;
+  height: 100%;
+  display: block; 
+}
+  
+.image-col {
+  -webkit-background-size: cover !important;
+  background-size: cover !important; 
+
+}
+  
+    
+footer {
+	text-align:center;
+	clear:both;
+	padding:20px;
+	margin:50px 0 0 0;
+	background:#CCC;
+	font-size:10px;
+	text-shadow:0 1px 0 #FFFFFF;
+}
+a {
+	text-decoration:none;
+	color:#666;
+}
+
+a:hover {
+	text-decoration:underline;
+	color:#666;
+}
+a:active {
+	text-decoration:none;
+	color:#666;
+}
+
+/*
+ * Default style for <Input> tag
+ * specific css applies depending on the <Input> type
+ */
+input[type=text], input[type=password] {
+	height:20px;
+	color:#666;	
+	padding:5px;
+}
+input[type=button], input[type=submit] {
+	-moz-box-shadow:inset 0px 1px 0px 0px #666;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #666;
+	box-shadow:inset 0px 1px 0px 0px #666;
+	background-color:#666;
+	color:#FFFFFF;
+	display:inline-block;
+	font-family:Verdana;
+	font-size:12px;
+	font-weight:normal;
+	padding:2px 18px;
+	text-decoration:none;
+	/*text-shadow:1px 1px 0px #EEE;*/
+	cursor:pointer;
+	
+}
+input[type=button]:hover, input[type=submit]:hover {
+	background-color:#333;
+}
+input[type=button]:hover, input[type=submit]:active {
+	position:relative;
+	top:1px;
+}
+/*
+ * Logo placement in the center
+ */
+
+#logo {
+    background-image:url('../images/logo.png');
+    width:300px;
+    height:50px;
+    border:0px;
+    left:0px;
+	background-repeat:no-repeat;
+	float:left;
+	
+}
+
+#logo h1,
+#logo h1 a{
+	display:block;
+	float:left;
+	width:314px;
+	height:85px;
+	padding: 5px 3px 0 3px;
+	color:#FFF;
+	font-size:1px;
+	line-height:1px;
+	text-indent:-10000px;
+}
+
+#logo h1 a{
+	float:none;
+	padding:0;
+}
+
+.logo-container {
+  background: #00b37d;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -92px;
+  z-index: 200;
+  width: 185px;
+  padding: 10px 0; 
+}
+
+.location-search-container {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -200px;
+	z-index: 200;
+	width: 400px;
+	padding: 10px 0;
+}
+.quote-background {
+	background: #000;
+	opacity: 0.4;
+}
+.quote-container {
+	display: inline-block;
+	position: absolute;
+	top: 28%;
+	left: 50%;
+	margin-left: -250px;
+	z-index: 200;
+	width: 500px;
+	padding: 10px 0;	
+}
+
+.quote-container p {
+	color: #fafafa;
+	font-size: 25px;
+	/*text-shadow:0 1px 0 #FFFFFF;*/	
+}
+
+.logo-container .big-logo {
+    display: none; 
+}
+    
+img {
+  max-width: 100%;
+ 
+  height: auto;
+  width: auto\9;
+  /* ie8 */ 
+}
+
+.filter {
+	opacity: 0.9;
+	filter: alpha (opacity=90); /* For IE8 and earlier */
+}
+.row1 {
+	background:#F8F8F8;
+}
+
+.row2 {
+	background:#FFFFFF;
+}
+.grayBorderBotom {
+	border-bottom:1px solid #EBEBEB;
+}
+.errorInput {
+	height:20px;
+	color:#666;
+	border:1px solid red;
+}
+
+/*
+table {
+	background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#EDEDED));
+	background: -moz-linear-gradient(top,  #EEEEEE,  #EDEDED);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEEEEE', endColorstr='#EDEDED');	
+}
+*/
+
+.table {
+	background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#EDEDED));
+	background: -moz-linear-gradient(top,  #EEEEEE,  #EDEDED);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEEEEE', endColorstr='#EDEDED');	
+
+}
+.trHeader {
+	font-weight:bold;
+}
+tr td {
+	font-size:12px;
+}
+
+.tdDarkGray {
+	font-size:12px;
+	color:#333;
+}
+
+
