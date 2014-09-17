@@ -6,14 +6,14 @@ error_reporting(E_ALL);
 // start the session
 session_start();
 
-$production = stripos($_SERVER['SERVER_NAME'],"shiro.com") !== FALSE;
+$production = stripos($_SERVER['SERVER_NAME'],"DomainName.com") !== FALSE;
 
 // database connection config
 if ($production) {
 	$dbHost = 'localhost';
 	$dbUser = 'root';
-	$dbPass = 'alexchristy0325';
-	$dbName = 'shiro';
+	$dbPass = '';
+	$dbName = '';
 } else {
 	$dbHost = 'localhost';
 	$dbUser = 'root';
